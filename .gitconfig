@@ -1,0 +1,15 @@
+[user]
+	name = Rob Van Dam
+	email = rvandam00@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[core]
+	editor = vim
+    excludesfile = ~/.gitignore_global
+    whitespace = trailing-space,space-before-tab
+[push]
+    default = simple
+[color]
+    ui = auto
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

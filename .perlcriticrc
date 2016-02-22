@@ -1,0 +1,55 @@
+verbose = 7
+
+# mixing precedence never hurt anyone
+[-ValuesAndExpressions::ProhibitMixedBooleanOperators]
+
+# nested ifs are far too common to cry about
+[ControlStructures::ProhibitDeepNests]
+max_nests = 6
+
+# too many people don't do this
+[RegularExpressions::RequireExtendedFormatting]
+[RegularExpressions::RequireDotMatchAnything]
+
+# set complexity threshold a bit higher
+[Subroutines::ProhibitExcessComplexity]
+max_mccabe = 35
+[Modules::ProhibitExcessMainComplexity]
+max_mccabe = 35
+
+# allow for die in main non-library code, especially tests
+[ErrorHandling::RequireCarping]
+allow_in_main_unless_in_subroutine = 1
+
+# too many false positives
+[-Modules::RequireVersionVar]
+
+# may need to disable this completely but at least limit it
+[ControlStructures::ProhibitPostfixControls]
+allow = if
+
+# too many constants are well known
+[-ValuesAndExpressions::ProhibitMagicNumbers]
+
+# checking close is rarely needed
+[-InputOutput::RequireCheckedClose]
+
+# checking print is a bit excessive
+[-InputOutput::RequireCheckedSyscalls]
+
+# a bit silly to require below 7 digits
+[-ValuesAndExpressions::RequireNumberSeparators]
+min_value = 1_000_000
+
+# ':' actually reads better than q{:} in my opinion
+[-ValuesAndExpressions::ProhibitNoisyQuotes]
+
+# allow for double quoting single quotes
+[ValuesAndExpressions::ProhibitInterpolationOfLiterals]
+allow_if_string_contains_single_quote = 1
+
+# doesn't seem necessary to me
+[-InputOutput::RequireBracedFileHandleWithPrint]
+
+# perl tidy can be kinda cray cray
+[-CodeLayout::RequireTidyCode]
