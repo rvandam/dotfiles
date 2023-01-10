@@ -93,14 +93,9 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-alias zsh="ssh -A zugzug.bluehost.com. -p5190 -t ssh -A "
-alias zsh2="ssh -A zugzug2.bluehost.com. -p5190 -t ssh -A "
-alias wsh="ssh -A zugzug.bluehost.com. -p5190 -t ssh -A zugzug3.unifiedlayer.com -p5190 -t ssh -A "
-alias wsh2="ssh -A zugzug2.bluehost.com. -p5190 -t ssh -A zugzug3.unifiedlayer.com -p5190 -t ssh -A "
 alias riwl="sudo rmmod iwlagn; sudo modprobe iwlagn";
 alias rme='docker rm -v $(docker ps -a -q -f status=exited)'
 alias rmd='docker rmi $(docker images -f "dangling=true" -q)'
-alias cssh='cssh -o "-t -A -p 5190 -o StrictHostKeyChecking=no zugzug2.bluehost.com ssh"'
 alias jump1="ssh -A jump1.provo.unifiedlayer.com."
 
 if [ -f ~/prompt-rvandam.sh ]; then
