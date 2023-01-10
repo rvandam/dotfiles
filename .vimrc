@@ -136,11 +136,13 @@ nmap ,cs :VCSStatus<CR>
 " Remove diff colors
 map  ,cc :set nodiff<CR>
 
-map  ,wc :!PROV=roster perl -wc %<CR>
-
 " map S to quickly do global search and replace
 nmap S :%s//g<LEFT><LEFT>
 vmap S :s//g<LEFT><LEFT>
 
 " set K to search perldoc
 set keywordprg=perldoc\ -f
+
+" for Jeff
+set nu
+set laststatus=2
